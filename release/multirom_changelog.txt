@@ -1,0 +1,2 @@
+v20150122: First release. Very unstable.
+v20150123: Add hooks and code for waiting block devices. Use multirom fstab.

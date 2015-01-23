@@ -1,24 +1,109 @@
 {
     "status": "ok",
-    "date": "2015-01-22",
+    "date": "2015-01-23",
     "commands": "",
     "gpg": false,
     "devices": [
         {
             "files": [
                 {
-                    "url": "https://raw.githubusercontent.com/proDOOMman/android_X9180_MultiROM/master/release/multirom-20150122-v30-UNOFFICIAL-X9180.zip",
+                    "url": "https://raw.githubusercontent.com/proDOOMman/android_X9180_MultiROM/master/release/multirom-20150123-v30-UNOFFICIAL-X9180.zip",
                     "version": "30",
                     "type": "multirom",
-                    "size": 3906325,
-                    "md5": "55c5f5fd13dda5090be048347aae2b43"
+                    "size": 3907579,
+                    "md5": "1c320faaa1f209326a84b98cb1302446"
                 },
                 {
-                    "url": "https://raw.githubusercontent.com/proDOOMman/android_X9180_MultiROM/master/release/TWRP-20150122-2.8.4-X9180.img",
-                    "version": "mrom20150122-00",
+                    "url": "https://raw.githubusercontent.com/proDOOMman/android_X9180_MultiROM/master/release/TWRP-20150123-2.8.4-X9180.img",
+                    "version": "mrom20150123-00",
                     "type": "recovery",
-                    "size": 10612736,
-                    "md5": "4447c3d0faf953b521f0fee3275d067d"
+                    "size": 10133504,
+                    "md5": "378c2e277f30ba55543006dcc9c838e2"
+                },
+                {
+                    "extra": {
+                        "releases": [
+                            "MoKee by proDOOMman v2014.12.24 (main storage - SD card)"
+                        ]
+                    },
+                    "url": "https://raw.githubusercontent.com/proDOOMman/android_X9180_MultiROM/master/release/MK-CrystalKernel-sd-int-20150123-X9180.zip",
+                    "version": "MoKee sd-int v150123",
+                    "md5": "9bbda1d49a0a69f8928165ab2e075932",
+                    "type": "kernel",
+                    "size": 9182443
+                },
+                {
+                    "extra": {
+                        "releases": [
+                            "MoKee by proDOOMman v2014.12.24 (main storage - internal memory)"
+                        ]
+                    },
+                    "url": "https://raw.githubusercontent.com/proDOOMman/android_X9180_MultiROM/master/release/MK-CrystalKernel-int-sd-20150123-X9180.zip",
+                    "version": "MoKee int-sd v150123",
+                    "md5": "786990f730b73a742e39f54dd91527e5",
+                    "type": "kernel",
+                    "size": 9184490
+                },
+
+                {
+                    "extra": {
+                        "releases": [
+                            "CM11 by proDOOMman v2014.12.24 (main storage - SD card)"
+                        ]
+                    },
+                    "url": "https://raw.githubusercontent.com/proDOOMman/android_X9180_MultiROM/master/release/CM11-CrystalKernel-sd-int-20150123-X9180.zip",
+                    "version": "CM11 sd-int v150123",
+                    "md5": "4af82db2921a71dba634ab70a0a95c80",
+                    "type": "kernel",
+                    "size": 9184487
+                },
+                {
+                    "extra": {
+                        "releases": [
+                            "CM11 by proDOOMman v2014.12.24 (main storage - internal memory)"
+                        ]
+                    },
+                    "url": "https://raw.githubusercontent.com/proDOOMman/android_X9180_MultiROM/master/release/CM11-CrystalKernel-int-sd-20150123-X9180.zip",
+                    "version": "CM11 int-sd v150123",
+                    "md5": "22f04b19f83920cb75cdba53ece78429",
+                    "type": "kernel",
+                    "size": 9188583
+                },
+                {
+                    "extra": {
+                        "releases": [
+                            "PAC by proDOOMman v2014.12.24 (main storage - SD card)"
+                        ]
+                    },
+                    "url": "https://raw.githubusercontent.com/proDOOMman/android_X9180_MultiROM/master/release/PAC-CrystalKernel-sd-int-20150123-X9180.zip",
+                    "version": "PAC sd-int v150123",
+                    "md5": "4d4b7e2e42918cf61116c42ced404c07",
+                    "type": "kernel",
+                    "size": 9309412
+                },
+                {
+                    "extra": {
+                        "releases": [
+                            "PAC by proDOOMman v2014.12.24 (main storage - internal memory)"
+                        ]
+                    },
+                    "url": "https://raw.githubusercontent.com/proDOOMman/android_X9180_MultiROM/master/release/PAC-CrystalKernel-int-sd-20150123-X9180.zip",
+                    "version": "PAC int-sd v150123",
+                    "md5": "9cc2f6688d64fa9d823f15029aa23f93",
+                    "type": "kernel",
+                    "size": 9315558
+                },
+                {
+                    "extra": {
+                        "releases": [
+                            "Stock H116"
+                        ]
+                    },
+                    "url": "https://raw.githubusercontent.com/proDOOMman/android_X9180_MultiROM/master/release/kernel-stock-h116-X9180.img",
+                    "version": "Stock H116 v150123",
+                    "md5": "1c0e295c5ce2418a170cdc507ab55e4c",
+                    "type": "kernel",
+                    "size": 6936576
                 },
                 {
                     "url": "https://raw.githubusercontent.com/proDOOMman/android_X9180_MultiROM/master/release/multirom_uninstaller.zip",
@@ -30,18 +115,18 @@
             ],
             "changelogs": [
                 {
-                    "url": "http://pastebin.com/raw.php?i=30q9Zn7r",
+                    "url": "https://raw.githubusercontent.com/proDOOMman/android_X9180_MultiROM/master/release/multirom_changelog.txt",
                     "name": "MultiROM"
                 },
                 {
-                    "url": "http://pastebin.com/raw.php?i=30q9Zn7r",
+                    "url": "https://raw.githubusercontent.com/proDOOMman/android_X9180_MultiROM/master/release/recovery_changelog.txt",
                     "name": "Recovery"
                 }
             ],
             "name": "X9180",
             "ubuntu_touch": {
                 "req_multirom": "30",
-                "req_recovery": "mrom20150122-00"
+                "req_recovery": "mrom20150123-00"
             }
         }
     ]
