@@ -7,11 +7,11 @@
         {
             "files": [
                 {
-                    "url": "https://raw.githubusercontent.com/proDOOMman/android_X9180_MultiROM/master/release/multirom-20150123-v30-UNOFFICIAL-X9180.zip",
+                    "url": "https://raw.githubusercontent.com/proDOOMman/android_X9180_MultiROM/master/release/multirom-20150124-v30-UNOFFICIAL-X9180.zip",
                     "version": "30",
                     "type": "multirom",
-                    "size": 3907579,
-                    "md5": "1c320faaa1f209326a84b98cb1302446"
+                    "size": 3907595,
+                    "md5": "471807007485bc262602c4d40f91a518"
                 },
                 {
                     "url": "https://raw.githubusercontent.com/proDOOMman/android_X9180_MultiROM/master/release/TWRP-20150123-2.8.4-X9180.img",
