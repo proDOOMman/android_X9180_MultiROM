@@ -1,0 +1,12 @@
+diff --git a/util.c b/util.c
+index 3f516e0..4087c22 100644
+--- a/util.c
++++ b/util.c
+@@ -456,6 +456,7 @@ int64_t timeval_us_diff(struct timeval now, struct timeval prev)
+ 
+ char *readlink_recursive(const char *link)
+ {
++    wait_for_file(link, 5);
+     struct stat info;
+     if(lstat(link, &info) < 0)
+         return NULL;
