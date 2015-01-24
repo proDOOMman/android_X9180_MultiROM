@@ -10,7 +10,6 @@ const char *mr_init_devices[] =
     "/sys/class/graphics/fb0",
 
     "/sys/block/mmcblk0",
-    "/sys/block/mmcblk1",
 
     "/sys/devices/msm_sdcc.1",
     "/sys/devices/msm_sdcc.1/mmc_host/mmc0",
@@ -24,18 +23,22 @@ const char *mr_init_devices[] =
     "/sys/devices/msm_sdcc.1/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p1",	// modem (firmware)
     "/sys/devices/msm_sdcc.1/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p27",	// grow (internal storage)
 
-    "/sys/devices/msm_sdcc.2/mmc_host/mmc1",
-    "/sys/devices/msm_sdcc.2/mmc_host/mmc1/mmc1:59b4",
-    "/sys/devices/msm_sdcc.2/mmc_host/mmc1/mmc1:59b4/block/mmcblk1",
-    "/sys/devices/msm_sdcc.2/mmc_host/mmc1/mmc1:59b4/block/mmcblk1/mmcblk1p1",	// sdcard
-
     "/sys/bus/mmc",
     "/sys/bus/mmc/drivers/mmcblk",
     "/sys/module/mmc_core",
     "/sys/module/mmcblk",
     
-    "/sys/devices/gpio_keys.74/input*",
-    "/sys/devices/virtual/input*",
+    "/sys/devices/gpio_keys.74",
+    "/sys/devices/gpio_keys.74/input/input4",
+    "/sys/devices/gpio_keys.74/input/input4/event4",
+    "/sys/devices/virtual/input/input0/event0",
+    "/sys/devices/virtual/input/input0",
+    "/sys/devices/virtual/input/input1/event1",
+    "/sys/devices/virtual/input/input1",
+    "/sys/devices/virtual/input/input2/event2",
+    "/sys/devices/virtual/input/input2",
+    "/sys/devices/virtual/input/input3/event3",
+    "/sys/devices/virtual/input/input3",
     "/sys/devices/virtual/misc/uinput",
     "/sys/module/uinput",
 
@@ -48,6 +51,13 @@ const char *mr_init_devices[] =
     // USB drive is in here
     "/sys/devices/platform/msm_hsusb_host",
     "/sys/bus/platform/drivers/msm_ehci_host",
+
+    "/sys/block/mmcblk1",
+    
+    "/sys/devices/msm_sdcc.2/mmc_host/mmc1",
+    "/sys/devices/msm_sdcc.2/mmc_host/mmc1/mmc1:59b4",
+    "/sys/devices/msm_sdcc.2/mmc_host/mmc1/mmc1:59b4/block/mmcblk1",
+    "/sys/devices/msm_sdcc.2/mmc_host/mmc1/mmc1:59b4/block/mmcblk1/mmcblk1p1",	// sdcard
 
     NULL
 };

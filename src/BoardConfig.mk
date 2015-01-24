@@ -8,6 +8,9 @@ MR_KEXEC_MEM_MIN := 0x05000000
 MR_KEXEC_DTB := true
 MR_INFOS := device/ZTE/X9180/mr/mrom_infos
 MR_CONTINUOUS_FB_UPDATE := true
+MR_USE_MROM_FSTAB := true
+MR_DEVICE_HOOKS := device/ZTE/X9180/mr/mr_hooks.c
+MR_DEVICE_HOOKS_VER := 4
 
 # Recovery
 BOARD_SUPPRESS_EMMC_WIPE := true
