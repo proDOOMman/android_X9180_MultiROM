@@ -1,8 +1,38 @@
 diff --git a/multirom.cpp b/multirom.cpp
-index a186ce9..da254c2 100644
+index 0ad8f49..6af9bf6 100644
 --- a/multirom.cpp
 +++ b/multirom.cpp
-@@ -1673,7 +1673,7 @@ bool MultiROM::extractBootForROM(std::string base)
+@@ -7,6 +7,7 @@
+ #include <linux/xattr.h>
+ #include <sys/xattr.h>
+ #include <sys/vfs.h>
++#include <sys/statvfs.h>
+ 
+ // clone libbootimg to /system/extras/ from
+ // https://github.com/Tasssadar/libbootimg.git
+@@ -1096,6 +1097,8 @@ bool MultiROM::prepareZIP(std::string& file, bool &has_block_update)
+ 	int itr = 0;
+ 	char *token, *p, *saveptr;
+ 	bool changed = false;
++	struct statvfs fiData;
++	int tmpFreeSpace = 450*1024*1024;
+ 
+ 	char cmd[512];
+ 	system("rm /tmp/mr_update.zip");
+@@ -1210,7 +1213,11 @@ bool MultiROM::prepareZIP(std::string& file, bool &has_block_update)
+ 
+ 	if(changed)
+ 	{
+-		if(info.st_size < 450*1024*1024)
++		if((statvfs("/tmp", &fiData)) >= 0 ) {
++			tmpFreeSpace = fiData.f_bsize * fiData.f_bfree - 50*1024*1024;
++			gui_print("Free space on /tmp = %d Mb\n", tmpFreeSpace/1024/1024);
++		}
++		if(info.st_size < tmpFreeSpace)
+ 		{
+ 			gui_print("Copying ZIP to /tmp...\n");
+ 			sprintf(cmd, "cp \"%s\" /tmp/mr_update.zip", file.c_str());
+@@ -1676,7 +1683,7 @@ bool MultiROM::extractBootForROM(std::string base)
  
  	// copy needed files
  	static const char *cp_f[] = {
