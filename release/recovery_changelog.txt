@@ -1,3 +1,4 @@
 v20150122: First release. Very unstable.
 v20150123: Add boot name for using in MultiROMMgr.
+v20150124: Update recovery sources and rebuild it.
 v20150127: Using /tmp free space size instead of hardcoded limit.
