@@ -1,3 +1,4 @@
-v20150122: First release. Very unstable.
-v20150123: Add hooks and code for waiting block devices.
-v20150124: Allow booting stock firmwares with invalid fstab.
+v20150122 (v30)  : First release. Very unstable.
+v20150123 (v30)  : Add hooks and code for waiting block devices.
+v20150124 (v30)  : Allow booting stock firmwares with invalid fstab.
+v20150209 (v30a) : Allow to install firmwares to internal storage.

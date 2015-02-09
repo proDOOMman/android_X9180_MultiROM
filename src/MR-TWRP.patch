@@ -1,5 +1,18 @@
+diff --git a/mrominstaller.cpp b/mrominstaller.cpp
+index 03dd33b..4cbbf8c 100644
+--- a/mrominstaller.cpp
++++ b/mrominstaller.cpp
+@@ -19,7 +19,7 @@ extern "C" {
+ #include "twcommon.h"
+ }
+ 
+-#define INTERNAL_MEM_LOC_TXT "Internal memory"
++#define INTERNAL_MEM_LOC_TXT "/data"
+ 
+ MROMInstaller::MROMInstaller()
+ {
 diff --git a/multirom.cpp b/multirom.cpp
-index 0ad8f49..6af9bf6 100644
+index 0ad8f49..46ac574 100644
 --- a/multirom.cpp
 +++ b/multirom.cpp
 @@ -7,6 +7,7 @@
@@ -10,6 +23,15 @@ index 0ad8f49..6af9bf6 100644
  
  // clone libbootimg to /system/extras/ from
  // https://github.com/Tasssadar/libbootimg.git
+@@ -192,7 +193,7 @@ std::string MultiROM::listInstallLocations()
+ 
+ 	while((dt = readdir(d)))
+ 	{
+-		if(strncmp(dt->d_name, "mmcblk0", 7) == 0 || strncmp(dt->d_name, "dm-", 3) == 0)
++		if((strncmp(dt->d_name, "mmcblk0", 7) == 0 && strncmp(dt->d_name, "mmcblk0p27", 10) != 0) || strncmp(dt->d_name, "dm-", 3) == 0)
+ 			continue;
+ 		snprintf(path, sizeof(path), "/dev/block/%s", dt->d_name);
+ 
 @@ -1096,6 +1097,8 @@ bool MultiROM::prepareZIP(std::string& file, bool &has_block_update)
  	int itr = 0;
  	char *token, *p, *saveptr;
@@ -41,3 +63,16 @@ index 0ad8f49..6af9bf6 100644
  		// Since Android 4.3 - for SELinux
  		"file_contexts", "property_contexts", "seapp_contexts", "sepolicy",
  		NULL
+diff --git a/multirom.h b/multirom.h
+index c8d2026..99d3b2d 100644
+--- a/multirom.h
++++ b/multirom.h
+@@ -52,7 +52,7 @@ enum
+ #define INTERNAL_NAME "Internal"
+ #define REALDATA "/realdata"
+ #define MAX_ROM_NAME 26
+-#define INTERNAL_MEM_LOC_TXT "Internal memory"
++#define INTERNAL_MEM_LOC_TXT "/data"
+ 
+ // Not defined in android includes?
+ #define MS_RELATIME (1<<21)

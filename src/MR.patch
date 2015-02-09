@@ -1,3 +1,16 @@
+diff --git a/multirom.c b/multirom.c
+index 2aa5e5f..32cd706 100644
+--- a/multirom.c
++++ b/multirom.c
+@@ -2239,7 +2239,7 @@ int multirom_update_partitions(struct multirom_status *s)
+ 
+         tok = strrchr(line, '/')+1;
+         name = strndup(tok, strchr(tok, ':') - tok);
+-        if(strncmp(name, "mmcblk0", 7) == 0 || strncmp(name, "dm-", 3) == 0) // ignore internal nand
++        if((strncmp(name, "mmcblk0", 7) == 0 && strncmp(name, "mmcblk0p27", 10) != 0) || strncmp(name, "dm-", 3) == 0) // ignore internal nand
+         {
+             free(name);
+             goto next_itr;
 diff --git a/util.c b/util.c
 index 3f516e0..4087c22 100644
 --- a/util.c
@@ -10,3 +23,14 @@ index 3f516e0..4087c22 100644
      struct stat info;
      if(lstat(link, &info) < 0)
          return NULL;
+diff --git a/version.h b/version.h
+index 4e7dfc5..d5ccf02 100644
+--- a/version.h
++++ b/version.h
+@@ -21,5 +21,5 @@
+     #define VERSION_TRAMPOLINE 14
+ 
+     // For device-specific fixes. Use letters, the version will then be like "12a"
+-    #define VERSION_DEV_FIX ""
++    #define VERSION_DEV_FIX "a"
+ #endif
