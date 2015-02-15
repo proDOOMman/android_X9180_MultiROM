@@ -14,11 +14,11 @@
                     "md5": "9e2fade0efb480975be58652e59394f5"
                 },
                 {
-                    "url": "https://raw.githubusercontent.com/proDOOMman/android_X9180_MultiROM/master/release/TWRP-20150208-2.8.4-X9180.img",
-                    "version": "mrom20150208-00",
+                    "url": "https://raw.githubusercontent.com/proDOOMman/android_X9180_MultiROM/master/release/TWRP-20150215-2.8.5-X9180.img",
+                    "version": "mrom20150215-00",
                     "type": "recovery",
-                    "size": 10139648,
-                    "md5": "38cd971706b97bae01d3ce6c24b0dedd"
+                    "size": 10084352,
+                    "md5": "aed98a197f02a4691fd9ac2f4d90e7ac"
                 },
                 {
                     "extra": {
@@ -126,7 +126,7 @@
             "name": "X9180",
             "ubuntu_touch": {
                 "req_multirom": "30a",
-                "req_recovery": "mrom20150208-00"
+                "req_recovery": "mrom20150215-00"
             }
         }
     ]
