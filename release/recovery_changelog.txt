@@ -4,3 +4,4 @@ v20150124: Update recovery sources and rebuild it.
 v20150127: Using /tmp free space size instead of hardcoded limit.
 v20150208: Allow to install firmwares to internal storage.
 v20150215: Update TWRP to 2.8.5
+v20151107: Update TWRP to 2.8.7
