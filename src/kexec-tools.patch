@@ -1,0 +1,13 @@
+diff --git a/kexec/arch/arm/mach-hammerhead.c b/kexec/arch/arm/mach-hammerhead.c
+index 85b1a37..b13f18e 100644
+--- a/kexec/arch/arm/mach-hammerhead.c
++++ b/kexec/arch/arm/mach-hammerhead.c
+@@ -188,7 +188,7 @@ static int hammerhead_add_extra_regs(void *dtb_buf)
+ }
+ 
+ const struct arm_mach arm_mach_hammerhead = {
+-    .boardnames = { "hammerhead", "bacon", "d851", NULL },
++    .boardnames = { "hammerhead", "bacon", "d851", "X9180", NULL },
+     .choose_dtb = hammerhead_choose_dtb,
+     .add_extra_regs = hammerhead_add_extra_regs,
+ };

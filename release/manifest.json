@@ -7,18 +7,18 @@
         {
             "files": [
                 {
-                    "url": "https://raw.githubusercontent.com/proDOOMman/android_X9180_MultiROM/master/release/multirom-20150216-v31a-UNOFFICIAL-X9180.zip",
-                    "version": "31a",
+                    "url": "https://raw.githubusercontent.com/proDOOMman/android_X9180_MultiROM/master/release/multirom-20151108-v32a-UNOFFICIAL-X9180.zip",
+                    "version": "32a",
                     "type": "multirom",
-                    "size": 3613365,
-                    "md5": "e0f2c42f4722a96bf4b40af2fa0646c1"
+                    "size": 3930292,
+                    "md5": "87a8efb7c52e425a7493fe22022525f8"
                 },
                 {
-                    "url": "https://raw.githubusercontent.com/proDOOMman/android_X9180_MultiROM/master/release/TWRP-20150215-2.8.5-X9180.img",
-                    "version": "mrom20150215-00",
+                    "url": "https://raw.githubusercontent.com/proDOOMman/android_X9180_MultiROM/master/release/TWRP-20151107-2.8.7-X9180.img",
+                    "version": "mrom20151107-00",
                     "type": "recovery",
-                    "size": 10084352,
-                    "md5": "aed98a197f02a4691fd9ac2f4d90e7ac"
+                    "size": 12007424,
+                    "md5": "907099c59028c568f6f943c3c99c9e80"
                 },
                 {
                     "extra": {

@@ -1,34 +1,41 @@
-diff --git a/multirom.c b/multirom.c
-index 2aa5e5f..32cd706 100644
---- a/multirom.c
-+++ b/multirom.c
-@@ -2239,7 +2239,7 @@ int multirom_update_partitions(struct multirom_status *s)
- 
-         tok = strrchr(line, '/')+1;
-         name = strndup(tok, strchr(tok, ':') - tok);
--        if(strncmp(name, "mmcblk0", 7) == 0 || strncmp(name, "dm-", 3) == 0) // ignore internal nand
-+        if((strncmp(name, "mmcblk0", 7) == 0 && strncmp(name, "mmcblk0p27", 10) != 0) || strncmp(name, "dm-", 3) == 0) // ignore internal nand
-         {
-             free(name);
-             goto next_itr;
-diff --git a/util.c b/util.c
-index 3f516e0..4087c22 100644
---- a/util.c
-+++ b/util.c
-@@ -456,6 +456,7 @@ int64_t timeval_us_diff(struct timeval now, struct timeval prev)
- 
+diff --git a/kexec-tools b/kexec-tools
+--- a/kexec-tools
++++ b/kexec-tools
+@@ -1 +1 @@
+-Subproject commit 1945c661d8b117297d3ac44ea071556298c31ec3
++Subproject commit 1945c661d8b117297d3ac44ea071556298c31ec3-dirty
+diff --git a/lib/util.c b/lib/util.c
+index 37a0f74..cf65e88 100644
+--- a/lib/util.c
++++ b/lib/util.c
+@@ -504,6 +504,7 @@ int64_t timeval_us_diff(struct timeval now, struct timeval prev)
+ // presumably because the target does not exist, returns the last resolved path.
  char *readlink_recursive(const char *link)
  {
 +    wait_for_file(link, 5);
      struct stat info;
-     if(lstat(link, &info) < 0)
-         return NULL;
+     if(lstat(link, &info) < 0 || !S_ISLNK(info.st_mode))
+         return strdup(link);
+diff --git a/multirom.c b/multirom.c
+index 9da3e08..faaeefe 100644
+--- a/multirom.c
++++ b/multirom.c
+@@ -2267,7 +2267,8 @@ int multirom_update_partitions(struct multirom_status *s)
+ 
+         tok = strrchr(line, '/')+1;
+         name = strndup(tok, strchr(tok, ':') - tok);
+-        if(strncmp(name, "mmcblk0", 7) == 0 || strncmp(name, "dm-", 3) == 0) // ignore internal nand
++//      if( strncmp(name, "mmcblk0", 7) == 0                                          || strncmp(name, "dm-", 3) == 0) // ignore internal nand
++	if((strncmp(name, "mmcblk0", 7) == 0 && strncmp(name, "mmcblk0p27", 10) != 0) || strncmp(name, "dm-", 3) == 0) // ignore internal nand
+         {
+             free(name);
+             goto next_itr;
 diff --git a/version.h b/version.h
-index 4e7dfc5..d5ccf02 100644
+index 245eb78..b9d2f83 100644
 --- a/version.h
 +++ b/version.h
 @@ -21,5 +21,5 @@
-     #define VERSION_TRAMPOLINE 14
+     #define VERSION_TRAMPOLINE 26
  
      // For device-specific fixes. Use letters, the version will then be like "12a"
 -    #define VERSION_DEV_FIX ""
